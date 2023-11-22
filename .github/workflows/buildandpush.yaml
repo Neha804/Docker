@@ -33,5 +33,4 @@ jobs:
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/demo:latest
           ${{ secrets.DOCKER_USERNAME }}/demo:${{ github.sha }}
-has context menu
-Compose
+
