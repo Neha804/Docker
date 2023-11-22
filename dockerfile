@@ -7,4 +7,4 @@ WORKDIR /app
 COPY . /app
  
 # Specify the command to run on container start
-CMD [ "java", "-jar", "spring-boot-demo.jar" ]
+CMD [ "java", "-jar", "spring-boot-demo-0.0.1-SNAPSHOT.jar" ]
