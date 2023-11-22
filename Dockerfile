@@ -1,9 +1,10 @@
-#base docker image
 FROM openjdk:8-jdk-alpine
-
-#to maintain a metadata for docker image
-LABEL maintainer="Neha"
-
-ADD target/spring-boot-demo-0.0.1-SNAPSHOT.jar spring-boot-demo.jar
-
-ENTRYPOINT [ "java", "-jar", "spring-boot-demo.jar" ]
+ 
+# Set the working directory to /app
+WORKDIR /app
+ 
+# Copy the current directory contents into the container at /app
+COPY . /app
+ 
+# Specify the command to run on container start
+CMD [ "java", "-jar", "spring-boot-demo.jar" ]
