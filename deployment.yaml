@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 5  # Set the number of desired replicas
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: demo-container
+          image: docker.io/neha9832/demo:latest  # Use the image from Docker Hub
+          ports:
+            - containerPort: 5000  # Adjust the port if needed
